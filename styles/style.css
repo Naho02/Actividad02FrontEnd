@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #B9A2AE;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .fotos {
+    position: fixed;
+  }
+
+  .fotos .fotoDos {
+    border-color: #E40C34;
+    border-style: solid;
+    border-width: 2px;
+    transform: translateX(-120%) translateY(100%);
+  }
+
+  .fotos .fotoTres {
+    border-color: #E40C34;
+    border-style: solid;
+    border-width: 2px;
+    transform: translateX(-10%);
+  }
+
+  #BMWlogo img {
+    width: 50px;
+    height: 50px; 
+    transform: translateX(300%) translateY(120%);
+  }
+
+  .texto {
+    display:flex;
+    flex-flow: column;
+    color: #ffffff;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    /*align-content: center;*/
+
+    font-family:'Helvetica', sans-serif;
+    transform: translateX(10%) translateY(100%);
+  }
+
+  .texto .titulo{
+    font-size: 3vh;
+  }
+
+  .texto .subtitulo {
+    transform: translateY(40%);
+  }
+
+  .navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    font-family:'Helvetica', sans-serif;
+    
+    list-style: none;
+    margin: 0; 
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 20px; /*Aumento del padding para separar los elementos*/
+    color: white;
+  }
+
+  .orderbtn {
+    background-color: #E40C34;
+    border-radius: 10px;
+  }
+  
+  .navigation a:hover {
+    background: #180d2d ;
+  }
+
+  .orderbtn a:hover {
+    background-color: #180d2d;
+    border-radius: 10px;
+  }
+
+  .orderButton2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    font-family:'Helvetica', sans-serif;
+    
+    list-style: none;
+    margin: 0; 
+    transform: translateX(10%) translateY(400%);
+  }
+  
+  .orderButton2 a {
+    text-decoration: none;
+    display: block;
+    padding: 20px; /*Aumento del padding para separar los elementos*/
+    color: white;
+  }
+  
+  .orderButton2 a:hover {
+    background: #180d2d ;
+  }
+
+  .orderbtn2 {
+    background-color: #E40C34;
+    border-radius: 10px;
+  }
+
+  .orderbtn2 a:hover {
+    background-color: #180d2d;
+    border-radius: 10px;
+  }
+
+  
+  @media all and (max-width: 800px) { /*no puedo poner solo el max-width?*/
+    .navigation {
+      justify-content: space-around;
+    }
+    
+    #BMWlogo img {
+      width: 50px;
+      height: 50px; 
+      transform: translateX(150%) translateY(400%);
+    }
+
+    .texto {
+      display:flex;
+      flex-flow: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: center;
+      transform: translateX(0%) translateY(100%);
+    }
+
+    .orderButton2 {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      transform: translateX(18%) translateY(400%);
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+
+    .navigation li:last-of-type a { /*Que hace esto?*/
+      border-bottom: none;
+    }
+
+    #BMWlogo img {
+      display: none;
+    }
+
+    .texto {
+      display:flex;
+      align-items: center;
+      transform: translateX(0%) translateY(100%);
+    }
+
+    .orderButton2 {
+      display: none;
+    }
+
+    .texto .titulo{
+      font-size: 2vh;
+    }
+  
+    .texto .subtitulo {
+      font-size: 1.5vh;
+    }
+  }
+
+
